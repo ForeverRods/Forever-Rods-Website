@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 40px 0;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.hero {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.gallery-preview {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery-preview img {
+    width: 300px;
+    border-radius: 8px;
+}
