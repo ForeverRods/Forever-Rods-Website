@@ -31,3 +31,8 @@ h1 {
     width: 300px;
     border-radius: 8px;
 }
+.logo {
+    max-width: 220px;
+    height: auto;
+    margin-bottom: 20px;
+}
