@@ -113,9 +113,10 @@ footer p { margin: 0; }
 @media (max-width: 600px) {
     .site-header { width: calc(100% - 2rem); }
     .brand img { width: 28px; height: 64px; }
+    .site-header .brand img {width: 34px; height: 100px;}
     .brand span { font-size: 1rem; }
     .nav-cta { padding: .55rem .75rem; }
-    .hero-copy { min-height: 650px; padding-top: 8rem; }
+    .hero-copy { min-height: 650px; padding-top: 10rem; }
     h1 { font-size: clamp(3.35rem, 17vw, 5rem); }
     .hero-actions { align-items: flex-start; flex-direction: column; }
     .hero-visual { height: 520px; min-height: 0; }
