@@ -18,8 +18,8 @@ a { color: inherit; }
 .brand { display: inline-flex; align-items: center; gap: .85rem; text-decoration: none; font-family: "Libre Franklin", sans-serif; font-size: 1.25rem; font-weight: 800; letter-spacing: -.04em; }
 .brand img { width: 34px; height: 76px; object-fit: contain; }
 .site-header .brand img {
-    width: 92px;
-    height: 253px;
+    width: clamp(34px, 5vw, 92px);
+    height: clamp(100px, 14vw, 253px);
 }
 nav { display: flex;
     align-items: center;
@@ -116,7 +116,7 @@ footer p { margin: 0; }
     .site-header .brand img {width: 34px; height: 100px;}
     .brand span { font-size: 1rem; }
     .nav-cta { padding: .55rem .75rem; }
-    .hero-copy { min-height: 650px; padding-top: 10rem; }
+    .hero-copy { min-height: 650px; padding-top: 12rem; }
     h1 { font-size: clamp(3.35rem, 17vw, 5rem); }
     .hero-actions { align-items: flex-start; flex-direction: column; }
     .hero-visual { height: 520px; min-height: 0; }
