@@ -978,6 +978,10 @@ footer p { margin: 0; }
     padding: 8rem 0;
     border-bottom: 1px solid var(--line);
 }
+.craft-process-grip-step {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+    gap: clamp(2.5rem, 4vw, 5rem);
+}
 
 .craft-process-step-reverse {
     box-shadow: 0 0 0 100vmax var(--cream);
@@ -1040,10 +1044,11 @@ footer p { margin: 0; }
 
 .craft-process-grip-media {
     display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(210px, .8fr);
+    grid-template-columns: minmax(0, 1fr) minmax(180px, .42fr);
     grid-template-rows: repeat(2, minmax(0, 1fr));
     gap: 1rem;
-    min-height: 500px;
+    height: 420px;
+    min-height: 0;
 }
 
 .craft-process-grip-video {
@@ -1059,30 +1064,23 @@ footer p { margin: 0; }
     height: 100%;
     object-fit: cover;
 }
+.craft-process-grip-video video { object-fit: contain; }
 
 .craft-process-grip-photo {
-    position: relative;
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
     min-height: 0;
     margin: 0;
     overflow: hidden;
-    background: #d7d1c5;
+    background: transparent;
 }
 
 .craft-process-grip-photo figcaption {
-    position: absolute;
-    right: .75rem;
-    bottom: .75rem;
-    left: .75rem;
-    width: fit-content;
-    max-width: calc(100% - 1.5rem);
-    padding: .5rem .65rem;
-    color: white;
-    background: rgba(19, 39, 31, .9);
-    font-size: .66rem;
-    font-weight: 700;
-    letter-spacing: .05em;
-    line-height: 1.35;
-    text-transform: uppercase;
+    padding: .4rem 0 0;
+    color: #566159;
+    font-size: .7rem;
+    font-weight: 600;
+    line-height: 1.3;
 }
 
 
@@ -1252,6 +1250,7 @@ footer p { margin: 0; }
     }
 
     .craft-process-grip-media {
+        height: auto;
         min-height: 560px;
     }
 
