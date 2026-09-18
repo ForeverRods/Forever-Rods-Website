@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Forever Rods offers fishing rod repair in Katy, Texas, including grip and guide repairs and complete rod facelifts through local drop-off and pickup.">
+    <meta name="theme-color" content="#13271f">
+    <title>Rod Repairs &amp; Facelifts | Forever Rods</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Libre+Franklin:ital,wght@0,700;0,800;1,700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=9">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header repair-page-header" id="top">
+        <a class="brand" href="index.html" aria-label="Forever Rods home">
+            <img src="Images/logo-white.png" alt="">
+        </a>
+        <nav aria-label="Main navigation">
+            <a href="our-story.html">Our Story</a>
+            <a href="our-builds.html">Our Builds</a>
+            <a href="the-process.html">The Process</a>
+            <a class="nav-repairs" href="repairs-and-facelifts.html" aria-current="page"><span class="nav-repairs-full">Repairs &amp; Facelifts</span><span class="nav-repairs-short">Repairs</span></a>
+            <a class="nav-cta" href="start-a-rod.html">Start a Rod</a>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="repairs repair-page" aria-labelledby="repairs-title">
+            <div class="repairs-inner">
+                <div class="repairs-copy">
+                    <p class="section-number">Local rod care / Katy, Texas</p>
+                    <h1 id="repairs-title">Rod Repairs<br><em>&amp; Facelifts</em></h1>
+                    <h2>Keep the rod. Bring it back to life.</h2>
+                    <p>I repair worn grips, damaged guides, failing wraps, and other common problems that can shorten the life of a good fishing rod. For rods worth preserving, I can also strip them back to the blank and rebuild them with a new grip, guides, wraps, and finish.</p>
+                    <p>If you are looking for fishing rod repair in Katy, Texas, repairs and facelifts are available through local drop-off and pickup in the Katy area. Every rod is inspected before work and pricing are approved. I do not accept shipped repairs.</p>
+                    <div class="repairs-actions">
+                        <a class="button button-primary" href="mailto:foreverrodsco@gmail.com?subject=Rod%20Repair%20Inquiry">Ask About a Repair</a>
+                        <a class="text-link" href="#rod-facelift">See a Rod Facelift <span aria-hidden="true">&#8594;</span></a>
+                    </div>
+                </div>
+                <div class="facelift-story" id="rod-facelift">
+                    <p class="facelift-label">A rod worth keeping</p>
+                    <h2>Twenty years on the water. Ready for more.</h2>
+                    <p>The owner loved this rod, but its cork was disintegrating, the guides were bent, and the wraps were failing. I stripped it down to its original blank and rebuilt the rod around it.</p>
+                    <div class="facelift-videos">
+                        <figure>
+                            <video data-facelift-video controls autoplay muted loop preload="auto" playsinline poster="Videos/rod-facelift-before-poster.jpg" aria-label="Rod before its facelift, showing the worn cork and damaged components">
+                                <source src="Videos/rod-facelift-before-silent.mp4" type="video/mp4">
+                                Your browser does not support video playback.
+                            </video>
+                            <figcaption>Before <span>Worn cork, bent guides, failing wraps</span></figcaption>
+                        </figure>
+                        <figure>
+                            <video data-facelift-video controls autoplay muted loop preload="auto" playsinline poster="Videos/rod-facelift-after-poster.jpg" aria-label="Rod after its facelift, rebuilt around the original blank">
+                                <source src="Videos/rod-facelift-after-silent.mp4" type="video/mp4">
+                                Your browser does not support video playback.
+                            </video>
+                            <figcaption>After <span>Rebuilt around the original blank</span></figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a class="brand footer-brand" href="index.html" aria-label="Forever Rods home">
+            <img src="Images/logo-white.png" alt="">
+        </a>
+        <p>Custom fishing rods built one at a time.</p>
+        <p>&copy; 2026 Forever Rods LLC</p>
+    </footer>
+    <script>
+        const faceliftVideos = [...document.querySelectorAll('[data-facelift-video]')];
+        faceliftVideos.forEach(video => video.pause());
+        Promise.all(faceliftVideos.map(video => video.readyState >= 2
+            ? Promise.resolve()
+            : new Promise(resolve => video.addEventListener('loadeddata', resolve, { once: true }))
+        )).then(() => {
+            faceliftVideos.forEach(video => { video.currentTime = 0; });
+            faceliftVideos.forEach(video => video.play().catch(() => {}));
+        });
+    </script>
+</body>
+</html>
