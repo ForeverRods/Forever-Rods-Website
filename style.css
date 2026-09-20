@@ -938,6 +938,25 @@ footer p { margin: 0; }
     grid-template-columns: minmax(0, 1fr) minmax(360px, 1.2fr);
 }
 
+.build-feature--landscape .build-feature-copy {
+    justify-content: flex-start;
+    padding: clamp(1.5rem, 3vw, 3rem);
+}
+
+.build-feature--landscape .build-feature-media {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 1.5rem;
+}
+
+.build-feature-description {
+    margin: 0;
+    color: var(--cream);
+    font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+    line-height: 1.7;
+}
+
 .build-feature--landscape .build-feature-media video {
     max-width: none;
     aspect-ratio: 16 / 9;
@@ -946,10 +965,6 @@ footer p { margin: 0; }
 @media (max-width: 760px) {
     .build-feature--landscape {
         grid-template-columns: 1fr;
-    }
-
-    .build-feature--landscape .build-feature-media {
-        order: -1;
     }
 
     .build-feature--landscape .build-feature-media video {
