@@ -756,6 +756,24 @@ footer p { margin: 0; }
 }
 
 
+/* Ideas for future custom builds */
+
+.build-possibilities { color: var(--paper); background: var(--forest); }
+.build-possibilities .section-number,
+.build-possibilities .build-label { color: #dbc8a2; }
+.build-possibilities .build-category-heading div > p { color: #d8dfda; }
+.build-series-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.5rem, 3vw, 3rem); margin-top: 4rem; }
+.build-series { min-width: 0; padding-top: 1.75rem; border-top: 1px solid rgba(255,255,255,.3); }
+.build-series h3 { margin: .5rem 0 1rem; font-size: clamp(1.6rem, 2.2vw, 2.3rem); letter-spacing: -.04em; }
+.build-series > p:not(.build-label),
+.build-series li { color: #d8dfda; }
+.build-series ul { margin: 1.5rem 0 0; padding-left: 1.25rem; }
+.build-series li { padding-left: .25rem; margin-bottom: .75rem; }
+.build-series li::marker { color: #dbc8a2; }
+@media (max-width: 900px) {
+    .build-series-grid { grid-template-columns: 1fr; gap: 2rem; margin-top: 3rem; }
+}
+
 /* Contact section */
 
 .builds-page-contact .contact-details p {
