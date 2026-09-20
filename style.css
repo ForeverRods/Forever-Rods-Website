@@ -1218,6 +1218,12 @@ footer p { margin: 0; }
     text-transform: uppercase;
 }
 
+/* Keep the caption against the lower end of the photo's right-hand red arrow. */
+.craft-process-custom .craft-process-gallery-pole-vault figcaption {
+    top: 52.4%;
+    bottom: auto;
+}
+
 .craft-process-gallery-wide {
     grid-column: 1 / -1;
     height: clamp(260px, 25vw, 360px);
@@ -1370,7 +1376,7 @@ footer p { margin: 0; }
     }
 
     .craft-process-custom-images {
-        grid-template-columns: 1fr;
+        gap: .75rem;
     }
 
     .craft-process-custom-logos {
