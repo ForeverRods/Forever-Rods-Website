@@ -1384,11 +1384,18 @@ footer p { margin: 0; }
     }
 
     .craft-process-gallery-wide {
-        height: 190px;
+        height: auto;
     }
 
-    .craft-process-gallery-wide img {
+    .craft-process-custom .craft-process-gallery-wide img {
+        height: auto;
         object-fit: contain;
+    }
+
+    .craft-process-custom .craft-process-gallery-wide figcaption {
+        position: static;
+        width: 100%;
+        max-width: none;
     }
 
     .craft-process-custom figcaption {
