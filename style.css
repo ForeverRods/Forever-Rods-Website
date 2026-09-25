@@ -31,12 +31,12 @@ nav a { padding: 0.7rem 0.9rem;
     font-size: 1rem;
     font-weight: 600;
     text-decoration: none;}
-.nav-cta { padding: .65rem 1rem; border: 1px solid rgba(255,255,255,.8); }
-.nav-repairs { background: var(--orange); color: white; }
+.nav-cta { padding: .65rem 1rem; background: var(--orange); color: white; }
+.nav-repairs { border: 1px solid rgba(255,255,255,.8); color: white; }
 .nav-repairs-short { display: none; }
 .repair-page-header { position: relative; top: auto; left: auto; width: 100%; transform: none; padding: 1rem max(1.5rem, calc((100vw - var(--max)) / 2)); background: var(--forest); }
 .repair-page-header .brand img { width: 44px; height: 120px; }
-.repair-page-header .nav-repairs[aria-current="page"] { background: #af4d2c; }
+.repair-page-header .nav-repairs[aria-current="page"] { border-color: #dbc8a2; color: #dbc8a2; }
 .hero { min-height: 780px; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(390px, .95fr); color: white; background: var(--forest); }
 .hero-copy { display: flex;
     flex-direction: column;
@@ -112,6 +112,7 @@ h1 em { color: #dbc8a2; font-weight: 700; }
 .process-steps li > span { color: var(--orange); font-size: .76rem; font-weight: 700; letter-spacing: .1em; }
 .process-steps h3 { margin: 0 0 .35rem; font-size: 1.25rem; letter-spacing: -.035em; }
 .process-steps p { margin: 0; color: #606a64; }
+.process-steps .button { margin-top: 1rem; }
 .reasons { padding: 1rem 0 8rem; }
 .reason-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .reason-grid article { min-height: 260px; padding: 2rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -132,8 +133,9 @@ footer { display: grid; grid-template-columns: 1fr auto auto; gap: 2rem; align-i
 }
 footer p { margin: 0; }
 @media (max-width: 900px) {
-    .site-header { flex-wrap: wrap; gap: .5rem; }
-    .site-header nav { width: 100%; flex-wrap: wrap; justify-content: center; }
+    .site-header { gap: .75rem; }
+    .site-header .brand { flex-shrink: 0; }
+    .site-header nav { flex: 1; min-width: 0; flex-wrap: wrap; justify-content: center; }
     .start-rod { grid-template-columns: 1fr; }
     .start-rod-copy { padding: 13rem 1.5rem 5rem; }
     .start-rod-image { min-height: 0; height: 580px; }
@@ -1408,4 +1410,18 @@ footer p { margin: 0; }
     .craft-process-cta {
         padding: 5rem 1rem;
     }
+}
+
+/* Compact headers keep mobile navigation beside the logo. */
+@media (max-width: 900px) {
+    .hero-copy, .start-rod-copy, .story-hero-copy, .builds-page-hero-copy {
+        padding-top: 12rem;
+        justify-content: flex-start;
+    }
+}
+@media (max-width: 600px) {
+    .site-header { padding-block: 1rem; gap: .5rem; }
+    .site-header nav { gap: .35rem .15rem; padding: 0; }
+    .site-header nav a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: .5rem .4rem; white-space: nowrap; }
+    .hero-copy, .start-rod-copy, .story-hero-copy, .builds-page-hero-copy { padding-top: 10.5rem; }
 }
